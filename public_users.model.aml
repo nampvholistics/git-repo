@@ -155,7 +155,7 @@ Model public_users {
   }
   dimension last_visited_node {
     label: 'Last Visited Node'
-    type: 'composite'
+    type: 'text'
     hidden: false
     definition: @sql {{ #SOURCE.last_visited_node }};;
   }
