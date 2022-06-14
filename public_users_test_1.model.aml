@@ -2,6 +2,8 @@
 fygfy
 bfenfhb
 =======
+Model public_name {
+}
 Model public_users {
   type: 'table'
   label: 'Users'
