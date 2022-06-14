@@ -69,12 +69,6 @@ Model public_aml_studio_projects {
     hidden: false
     definition: @sql {{ #SOURCE.updated_at }};;
   }
-  dimension passphrase {
-    label: 'Passphrase'
-    type: 'text'
-    hidden: false
-    definition: @sql {{ #SOURCE.passphrase }};;
-  }
 
   owner: 'admin@domain.com'
   table_name: '"public"."aml_studio_projects"'

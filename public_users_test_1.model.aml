@@ -9,6 +9,7 @@ Model public_users {
     hidden: false
     definition: @sql {{ #SOURCE.id }};;
   }
+//abcd 
   dimension allow_authentication_token {
     label: 'Allow Authentication Token'
     type: 'truefalse'
