@@ -1,3 +1,16 @@
+Model public_test {
+type: 'table'
+  label: 'Tests'
+  description: ''
+  data_source_name: 'development'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+  }
+
+}
 Model public_users {
   type: 'table'
   label: 'Users'
