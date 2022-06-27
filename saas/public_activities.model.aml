@@ -1,7 +1,7 @@
 Model public_activities {
   type: 'table'
   label: 'Activities'
-  description: 'abcxyz'
+  description: 'abcxyz develop'
   data_source_name: 'development'
   dimension id {
     label: 'Id'
