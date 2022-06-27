@@ -1,0 +1,57 @@
+Model public_aml_studio_repositories1 {
+  type: 'table'
+  label: 'Aml Studio Repositories'
+  description: ''
+  data_source_name: 'development'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+  }
+  dimension owner_id {
+    label: 'Owner Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.owner_id }};;
+  }
+  dimension tenant_id {
+    label: 'Tenant Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.tenant_id }};;
+  }
+  dimension is_production {
+    label: 'Is Production'
+    type: 'truefalse'
+    hidden: false
+    definition: @sql {{ #SOURCE.is_production }};;
+  }
+  dimension project_id {
+    label: 'Project Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.project_id }};;
+  }
+  dimension created_at {
+    label: 'Created At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_at }};;
+  }
+  dimension updated_at {
+    label: 'Updated At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.updated_at }};;
+  }
+  dimension version {
+    label: 'Version'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.version }};;
+  }
+
+  owner: 'admin@domain.com'
+  table_name: '"public"."aml_studio_repositories"'
+}
