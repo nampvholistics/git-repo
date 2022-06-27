@@ -21,11 +21,11 @@ Model public_activities {
     hidden: false
     definition: @sql {{ #SOURCE.trackable_type }};;
   }
-  // A conflict
+  // Befef conflict
   dimension owner_id {
-    label: 'Owner Id'//ccc
+    label: 'Owner Id'//cccrgegcff
     type: 'number'
-    hidden: false
+    hidden: false //efefew3f3
     definition: @sql {{ #SOURCE.owner_id }};;
   }
   dimension owner_type {
