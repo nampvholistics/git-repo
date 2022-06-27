@@ -21,8 +21,9 @@ Model public_activities {
     hidden: false
     definition: @sql {{ #SOURCE.trackable_type }};;
   }
+  // A conflict
   dimension owner_id {
-    label: 'Owner Id'
+    label: 'Owner Id'//ccc
     type: 'number'
     hidden: false
     definition: @sql {{ #SOURCE.owner_id }};;
