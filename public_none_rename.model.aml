@@ -10,6 +10,8 @@ type: 'table'
     definition: @sql {{ #SOURCE.id }};;
   }
 
+//ai cho maf conflicrt
+// quai dan
 }
 
 // thoi ma, dung conflict
