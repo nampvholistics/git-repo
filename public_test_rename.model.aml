@@ -22,7 +22,7 @@ Model public_users {
     hidden: false
     definition: @sql {{ #SOURCE.id }};;
   }
-//abcd 
+//nothing to commit
   dimension allow_authentication_token {
     label: 'Allow Authentication Token'
     type: 'truefalse'
