@@ -11,6 +11,8 @@ type: 'table'
   }
 
 }
+
+// thoi ma, dung conflict
 Model public_users {
   type: 'table'
   label: 'Users'
