@@ -1,3 +1,4 @@
+//edit conflict
 Model public_dynamic_filters {
   type: 'table'
   label: 'Dynamic Filters'
