@@ -1,3 +1,4 @@
+//edit here hehee
 Model public_activities {
   type: 'table'
   label: 'Activities'
