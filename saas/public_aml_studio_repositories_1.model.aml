@@ -1,3 +1,4 @@
+//omg develop
 Model public_aml_studio_repositories {
   type: 'table'
   label: 'Aml Studio Repositories'
