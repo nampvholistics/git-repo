@@ -1,3 +1,4 @@
+// feature toggle
 Model public_feature_toggle_group_logs {
   type: 'table'
   label: 'Feature Toggle Group Logs'
