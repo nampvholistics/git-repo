@@ -1,0 +1,5 @@
+TableModel user_model {
+  type: "table",
+  table_name: "user_customize",
+  description: 'just for test',
+}
