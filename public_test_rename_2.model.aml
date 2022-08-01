@@ -1,7 +1,7 @@
 Model public_test {
 type: 'table'
   label: 'Tests'
-  description: ''
+  description: 'gygy'
   data_source_name: 'development'
   dimension id {
     label: 'Id'
