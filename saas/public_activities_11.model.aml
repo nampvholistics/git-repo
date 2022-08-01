@@ -1,4 +1,4 @@
-//edit here hehee
+// modified by them
 Model public_activities {
   type: 'table'
   label: 'Activities'
