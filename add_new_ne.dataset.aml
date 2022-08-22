@@ -1,0 +1,13 @@
+Dataset add_new_ne {
+  label: 'Add New Ne'
+  description: ''
+  data_source_name: 'development'
+  models: [
+    public_activities_1,
+    public_adhoc_queries,
+    public_adls2_dests
+  ]
+  relationships: [
+  ]
+  owner: 'admin@domain.com'
+}
