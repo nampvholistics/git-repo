@@ -1,0 +1,11 @@
+Dataset aml_dataset {
+  label: 'Aml Dataset'
+  description: ''
+  data_source_name: 'development'
+  models: [
+    public_aml_studio_repositories
+  ]
+  relationships: [
+  ]
+  owner: 'admin@domain.com'
+}
