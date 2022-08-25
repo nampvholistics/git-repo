@@ -62,6 +62,7 @@ Model public_activities {
     type: 'datetime'
     hidden: false
     definition: @sql {{ #SOURCE.created_at }};;
+    description: 'hihihi'
   }
   dimension updated_at {
     label: 'Updated At'
