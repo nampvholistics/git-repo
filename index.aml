@@ -1,1 +1,9 @@
-// recreate index file
+Model cool {
+  table_name: 'haha'
+  type: 'table'
+  data_source_name: 'admin'
+}
+// tai sao doi gap, xong goi dap?
+// qaopor
+// d hieu kieu j
+// ???
