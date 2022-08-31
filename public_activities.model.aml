@@ -93,7 +93,88 @@ Model public_activities {
     hidden: false // cool roi
     definition: @sql {{ #SOURCE.impersonator_id }};;
   }
+  dimension data_source_id {
+    label: "Data Source Id"
+    type: "number"
+    definition: @sql {{ #SOURCE.data_source_id }};;
+  }
+  dimension file_path {
+    label: "File Path"
+    type: "text"
+    definition: @sql {{ #SOURCE.file_path }};;
+  }
+  dimension format {
+    label: "Format"
+    type: "text"
+    definition: @sql {{ #SOURCE.format }};;
+  }
+  dimension separator {
+    label: "Separator"
+    type: "text"
+    definition: @sql {{ #SOURCE.separator }};;
+  }
+  dimension parameterize_csv_headers {
+    label: "Parameterize Csv Headers"
+    type: "truefalse"
+    definition: @sql {{ #SOURCE.parameterize_csv_headers }};;
+    description: "ok good"
+  }
+  dimension include_header {
+    label: "Include Header" // co comment o day
+    type: "truefalse"
+    definition: @sql {{ #SOURCE.include_header }};;
+  }
+  dimension user_id {
+    label: "User Id"
+    type: "number"
+    definition: @sql {{ #SOURCE.user_id }};;
+  }
+  dimension target_type {
+    label: "Target Type"
+    type: "text"
+    definition: @sql {{ #SOURCE.target_type }};;
+  }
+  dimension target_id {
+    label: "Target Id"
+    type: "number"
+    definition: @sql {{ #SOURCE.target_id }};;
+  }
+  dimension content {
+    label: "Content"
+    type: "text"
+    definition: @sql {{ #SOURCE.content }};;
+  }
+  dimension resolved_at {
+    label: "Resolved At"
+    type: "datetime"
+    definition: @sql {{ #SOURCE.resolved_at }};;
+  }
+  dimension new_f {
+    label: "New F"
+    type: "text"
+    definition: @sql {{ file_path }};;
+  }
+  dimension error {
+    label: "Error"
+    type: "text"
+    definition: @sql {{ #SOURCE.error }};;
+  }
+  dimension resolved {
+    label: "Resolved"
+    type: "truefalse"
+    definition: @sql {{ #SOURCE.resolved }};;
+  }
+  dimension public_key {
+    label: "Public Key"
+    type: "text"
+    definition: @sql {{ #SOURCE.public_key }};;
+  }
 
   owner: 'admin@domain.com'
-  table_name: '"public"."activities"'
+  table_name: "\"public\".\"client_public_keys\""
+  measure ms {
+    label: "Ms"
+    type: "number"
+    definition: @sql {{ impersonator_id }}-{{ tenant_id }};;
+  }
 }
