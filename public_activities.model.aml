@@ -124,7 +124,69 @@ Model public_activities {
     type: "truefalse"
     definition: @sql {{ #SOURCE.include_header }};;
   }
+  dimension root_model_id {
+    label: "Root Model Id"
+    type: "number"
+    definition: @sql {{ #SOURCE.root_model_id }};;
+  }
+  dimension title {
+    label: "Title"
+    type: "text"
+    definition: @sql {{ #SOURCE.title }};;
+  }
+  dimension description {
+    label: "Description"
+    type: "text"
+    definition: @sql {{ #SOURCE.description }};;
+  }
+  dimension category_id {
+    label: "Category Id"
+    type: "number"
+    definition: @sql {{ #SOURCE.category_id }};;
+  }
+  dimension query_mode {
+    label: "Query Mode"
+    type: "text"
+    definition: @sql {{ #SOURCE.query_mode }};;
+  }
+  dimension uname {
+    label: "Uname"
+    type: "text"
+    definition: @sql {{ #SOURCE.uname }};;
+    description: "nice"
+  }
+  dimension project_id {
+    label: "Project Id"
+    type: "number"
+    definition: @sql {{ #SOURCE.project_id }};;
+  }
+  dimension user_id {
+    label: "User Id"
+    type: "number"
+    definition: @sql {{ #SOURCE.user_id }};;
+  }
+  dimension target_type {
+    label: "Target Type"
+    type: "text"
+    definition: @sql {{ #SOURCE.target_type }};;
+  }
+  dimension target_id {
+    label: "Target Id"
+    type: "number"
+    definition: @sql {{ #SOURCE.target_id }};;
+  }
+  dimension content {
+    label: "Content"
+    type: "text"
+    definition: @sql {{ #SOURCE.content }};;
+    description: "good af"
+  }
+  dimension resolved_at {
+    label: "Resolved At"
+    type: "datetime"
+    definition: @sql {{ #SOURCE.resolved_at }};;
+  }
 
   owner: 'admin@domain.com'
-  table_name: "\"public\".\"adls2_dests\""
+  table_name: "\"public\".\"comments\""
 }
