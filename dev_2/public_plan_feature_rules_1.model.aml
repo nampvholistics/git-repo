@@ -1,0 +1,39 @@
+Model public_plan_feature_rules_1 {
+  type: 'table'
+  label: 'Plan Feature Rules'
+  description: ''
+  data_source_name: 'development_2'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+  }
+  dimension plan_id {
+    label: 'Plan Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.plan_id }};;
+  }
+  dimension feature_rule_id {
+    label: 'Feature Rule Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.feature_rule_id }};;
+  }
+  dimension created_at {
+    label: 'Created At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_at }};;
+  }
+  dimension updated_at {
+    label: 'Updated At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.updated_at }};;
+  }
+
+  owner: 'admin@domain.com'
+  table_name: '"public"."plan_feature_rules"'
+}

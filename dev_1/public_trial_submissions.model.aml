@@ -1,0 +1,111 @@
+Model public_trial_submissions {
+  type: 'table'
+  label: 'Trial Submissions'
+  description: ''
+  data_source_name: 'development_1'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+  }
+  dimension ip_address {
+    label: 'Ip Address'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.ip_address }};;
+  }
+  dimension country {
+    label: 'Country'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.country }};;
+  }
+  dimension page_accessed_at {
+    label: 'Page Accessed At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.page_accessed_at }};;
+  }
+  dimension submitted_at {
+    label: 'Submitted At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.submitted_at }};;
+  }
+  dimension first_name {
+    label: 'First Name'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.first_name }};;
+  }
+  dimension last_name {
+    label: 'Last Name'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.last_name }};;
+  }
+  dimension email {
+    label: 'Email'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.email }};;
+  }
+  dimension email_validated {
+    label: 'Email Validated'
+    type: 'truefalse'
+    hidden: false
+    definition: @sql {{ #SOURCE.email_validated }};;
+  }
+  dimension company_name {
+    label: 'Company Name'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.company_name }};;
+  }
+  dimension mobile_number {
+    label: 'Mobile Number'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.mobile_number }};;
+  }
+  dimension mobile_number_validated {
+    label: 'Mobile Number Validated'
+    type: 'truefalse'
+    hidden: false
+    definition: @sql {{ #SOURCE.mobile_number_validated }};;
+  }
+  dimension time_zone_offset {
+    label: 'Time Zone Offset'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.time_zone_offset }};;
+  }
+  dimension confirmation_code {
+    label: 'Confirmation Code'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.confirmation_code }};;
+  }
+  dimension tenant_id {
+    label: 'Tenant Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.tenant_id }};;
+  }
+  dimension details {
+    label: 'Details'
+    type: 'composite'
+    hidden: false
+    definition: @sql {{ #SOURCE.details }};;
+  }
+  dimension admin_creator_id {
+    label: 'Admin Creator Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.admin_creator_id }};;
+  }
+
+  owner: 'admin@domain.com'
+  table_name: '"public"."trial_submissions"'
+}

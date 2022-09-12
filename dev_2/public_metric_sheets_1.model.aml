@@ -1,0 +1,57 @@
+Model public_metric_sheets_1 {
+  type: 'table'
+  label: 'Metric Sheets'
+  description: ''
+  data_source_name: 'development_2'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+  }
+  dimension title {
+    label: 'Title'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.title }};;
+  }
+  dimension description {
+    label: 'Description'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.description }};;
+  }
+  dimension rows {
+    label: 'Rows'
+    type: 'composite'
+    hidden: false
+    definition: @sql {{ #SOURCE.rows }};;
+  }
+  dimension tenant_id {
+    label: 'Tenant Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.tenant_id }};;
+  }
+  dimension owner_id {
+    label: 'Owner Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.owner_id }};;
+  }
+  dimension created_at {
+    label: 'Created At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_at }};;
+  }
+  dimension updated_at {
+    label: 'Updated At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.updated_at }};;
+  }
+
+  owner: 'admin@domain.com'
+  table_name: '"public"."metric_sheets"'
+}

@@ -1,0 +1,81 @@
+Model public_query_metrics {
+  type: 'table'
+  label: 'Query Metrics'
+  description: ''
+  data_source_name: 'development_1'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+  }
+  dimension title {
+    label: 'Title'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.title }};;
+  }
+  dimension description {
+    label: 'Description'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.description }};;
+  }
+  dimension query {
+    label: 'Query'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.query }};;
+  }
+  dimension options {
+    label: 'Options'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.options }};;
+  }
+  dimension data_source_id {
+    label: 'Data Source Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.data_source_id }};;
+  }
+  dimension tenant_id {
+    label: 'Tenant Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.tenant_id }};;
+  }
+  dimension created_at {
+    label: 'Created At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_at }};;
+  }
+  dimension updated_at {
+    label: 'Updated At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.updated_at }};;
+  }
+  dimension time_field {
+    label: 'Time Field'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.time_field }};;
+  }
+  dimension owner_id {
+    label: 'Owner Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.owner_id }};;
+  }
+  dimension settings {
+    label: 'Settings'
+    type: 'composite'
+    hidden: false
+    definition: @sql {{ #SOURCE.settings }};;
+  }
+
+  owner: 'admin@domain.com'
+  table_name: '"public"."query_metrics"'
+}

@@ -1,0 +1,63 @@
+Model public_schedules {
+  type: 'table'
+  label: 'Schedules'
+  description: ''
+  data_source_name: 'development_1'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+  }
+  dimension repeat {
+    label: 'Repeat'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.repeat }};;
+  }
+  dimension start_date {
+    label: 'Start Date'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.start_date }};;
+  }
+  dimension end_date {
+    label: 'End Date'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.end_date }};;
+  }
+  dimension times {
+    label: 'Times'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.times }};;
+  }
+  dimension created_at {
+    label: 'Created At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_at }};;
+  }
+  dimension updated_at {
+    label: 'Updated At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.updated_at }};;
+  }
+  dimension paused {
+    label: 'Paused'
+    type: 'truefalse'
+    hidden: false
+    definition: @sql {{ #SOURCE.paused }};;
+  }
+  dimension tenant_id {
+    label: 'Tenant Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.tenant_id }};;
+  }
+
+  owner: 'admin@domain.com'
+  table_name: '"public"."schedules"'
+}
