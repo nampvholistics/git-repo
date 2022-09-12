@@ -1,0 +1,16 @@
+Dataset new_ds {
+  label: 'New Ds'
+  description: ''
+  data_source_name: 'development_2'
+  models: [
+    public_activities,
+    public_adls2_dests,
+    public_adhoc_queries,
+    public_user_attributes,
+    public_tenant_usages,
+    public_tenant_domains
+  ]
+  relationships: [
+  ]
+  owner: 'admin@domain.com'
+}
