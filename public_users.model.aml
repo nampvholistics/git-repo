@@ -129,12 +129,6 @@ Model public_users {
     hidden: false
     definition: @sql {{ #SOURCE.uid }};;
   }
-  dimension settings {
-    label: 'Settings'
-    type: 'composite'
-    hidden: false
-    definition: @sql {{ #SOURCE.settings }};;
-  }
   dimension deleted_at {
     label: 'Deleted At'
     type: 'datetime'
@@ -146,18 +140,6 @@ Model public_users {
     type: 'text'
     hidden: false
     definition: @sql {{ #SOURCE.invitation_status }};;
-  }
-  dimension nux {
-    label: 'Nux'
-    type: 'composite'
-    hidden: false
-    definition: @sql {{ #SOURCE.nux }};;
-  }
-  dimension last_visited_node {
-    label: 'Last Visited Node'
-    type: 'composite'
-    hidden: false
-    definition: @sql {{ #SOURCE.last_visited_node }};;
   }
   dimension title {
     label: 'Title'

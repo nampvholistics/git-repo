@@ -27,12 +27,6 @@ Model public_tenants {
     hidden: false
     definition: @sql {{ #SOURCE.updated_at }};;
   }
-  dimension settings {
-    label: 'Settings'
-    type: 'composite'
-    hidden: false
-    definition: @sql {{ #SOURCE.settings }};;
-  }
   dimension uname {
     label: 'Uname'
     type: 'text'
