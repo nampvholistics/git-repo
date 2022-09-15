@@ -9,6 +9,8 @@ Dataset new_ds {
     public_user_attributes,
     public_tenant_usages,
     public_tenant_domains
+    ,
+    public_tenants
   ]
   relationships: [
   ]
