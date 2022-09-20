@@ -4,7 +4,7 @@ Model public_activities {
   description: ''
   data_source_name: 'development_1'
   dimension id {
-    label: 'Id'
+    label: 'Id' // comment
     type: 'number'
     hidden: false
     definition: @sql {{ #SOURCE.id }};;
@@ -91,7 +91,7 @@ Model public_activities {
     label: "Impersonator Id"
     type: "number"
     definition: @sql {{ #SOURCE.impersonator_id }};;
-    description: "content"
+    description: "content" // comment 2
   }
 
   owner: 'admin@domain.com'
