@@ -1,10 +1,10 @@
-Model public_activities {
+Model public_activities_2 {
   type: 'table'
   label: 'Activities'
   description: ''
   data_source_name: 'development_1'
   dimension id {
-    label: 'Id' // comment
+    label: 'Id'
     type: 'number'
     hidden: false
     definition: @sql {{ #SOURCE.id }};;
@@ -88,10 +88,10 @@ Model public_activities {
     definition: @sql {{ #SOURCE.tenant_id }};;
   }
   dimension impersonator_id {
-    label: "Impersonator Id"
-    type: "number"
+    label: 'Impersonator Id'
+    type: 'number'
+    hidden: false
     definition: @sql {{ #SOURCE.impersonator_id }};;
-    description: "content" // comment 2
   }
 
   owner: 'admin@domain.com'

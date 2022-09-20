@@ -1,0 +1,51 @@
+Model public_model_ownerships {
+  type: 'table'
+  label: 'Model Ownerships'
+  description: ''
+  data_source_name: 'development_2'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+  }
+  dimension data_model_id {
+    label: 'Data Model Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.data_model_id }};;
+  }
+  dimension modelable_id {
+    label: 'Modelable Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.modelable_id }};;
+  }
+  dimension modelable_type {
+    label: 'Modelable Type'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.modelable_type }};;
+  }
+  dimension tenant_id {
+    label: 'Tenant Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.tenant_id }};;
+  }
+  dimension created_at {
+    label: 'Created At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_at }};;
+  }
+  dimension updated_at {
+    label: 'Updated At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.updated_at }};;
+  }
+
+  owner: 'admin@domain.com'
+  table_name: '"public"."model_ownerships"'
+}

@@ -1,0 +1,81 @@
+Model public_object_histories {
+  type: 'table'
+  label: 'Object Histories'
+  description: ''
+  data_source_name: 'development_2'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+  }
+  dimension source_type {
+    label: 'Source Type'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.source_type }};;
+  }
+  dimension source_id {
+    label: 'Source Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.source_id }};;
+  }
+  dimension created_ts {
+    label: 'Created Ts'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_ts }};;
+  }
+  dimension creator_id {
+    label: 'Creator Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.creator_id }};;
+  }
+  dimension updated_ts {
+    label: 'Updated Ts'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.updated_ts }};;
+  }
+  dimension updater_id {
+    label: 'Updater Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.updater_id }};;
+  }
+  dimension deleted_ts {
+    label: 'Deleted Ts'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.deleted_ts }};;
+  }
+  dimension deleter_id {
+    label: 'Deleter Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.deleter_id }};;
+  }
+  dimension created_at {
+    label: 'Created At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_at }};;
+  }
+  dimension updated_at {
+    label: 'Updated At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.updated_at }};;
+  }
+  dimension tenant_id {
+    label: 'Tenant Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.tenant_id }};;
+  }
+
+  owner: 'admin@domain.com'
+  table_name: '"public"."object_histories"'
+}

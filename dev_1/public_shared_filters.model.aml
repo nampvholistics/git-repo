@@ -1,0 +1,81 @@
+Model public_shared_filters {
+  type: 'table'
+  label: 'Shared Filters'
+  description: ''
+  data_source_name: 'development_1'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+  }
+  dimension name {
+    label: 'Name'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.name }};;
+  }
+  dimension settings {
+    label: 'Settings'
+    type: 'composite'
+    hidden: false
+    definition: @sql {{ #SOURCE.settings }};;
+  }
+  dimension tenant_id {
+    label: 'Tenant Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.tenant_id }};;
+  }
+  dimension data_source_id {
+    label: 'Data Source Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.data_source_id }};;
+  }
+  dimension created_at {
+    label: 'Created At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_at }};;
+  }
+  dimension updated_at {
+    label: 'Updated At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.updated_at }};;
+  }
+  dimension deleted_at {
+    label: 'Deleted At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.deleted_at }};;
+  }
+  dimension is_adhoc {
+    label: 'Is Adhoc'
+    type: 'truefalse'
+    hidden: false
+    definition: @sql {{ #SOURCE.is_adhoc }};;
+  }
+  dimension schedule_id {
+    label: 'Schedule Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.schedule_id }};;
+  }
+  dimension stats {
+    label: 'Stats'
+    type: 'composite'
+    hidden: false
+    definition: @sql {{ #SOURCE.stats }};;
+  }
+  dimension owner_id {
+    label: 'Owner Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.owner_id }};;
+  }
+
+  owner: 'admin@domain.com'
+  table_name: '"public"."shared_filters"'
+}
