@@ -1,0 +1,39 @@
+Model public_email_dests_1 {
+  type: 'table'
+  label: 'Email Dests'
+  description: ''
+  data_source_name: 'development_2'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+  }
+  dimension title {
+    label: 'Title'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.title }};;
+  }
+  dimension recipients {
+    label: 'Recipients'
+    type: 'composite'
+    hidden: false
+    definition: @sql {{ #SOURCE.recipients }};;
+  }
+  dimension options {
+    label: 'Options'
+    type: 'composite'
+    hidden: false
+    definition: @sql {{ #SOURCE.options }};;
+  }
+  dimension tenant_id {
+    label: 'Tenant Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.tenant_id }};;
+  }
+
+  owner: 'admin@domain.com'
+  table_name: '"public"."email_dests"'
+}

@@ -1,0 +1,19 @@
+import './public_activities.model.aml' {
+  public_activities as model__public_activities
+}
+import './public_tenants.model.aml' {
+  public_tenants as model__public_tenants
+}
+
+Dataset activity_tenant {
+  label: 'Activity Tenant'
+  description: ''
+  data_source_name: 'development_1'
+  models: [
+    model__public_activities,
+    model__public_tenants
+  ]
+  relationships: [
+  ]
+  owner: 'admin@domain.com'
+}

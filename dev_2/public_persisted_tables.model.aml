@@ -1,0 +1,81 @@
+Model public_persisted_tables {
+  type: 'table'
+  label: 'Persisted Tables'
+  description: ''
+  data_source_name: 'development_2'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+  }
+  dimension persistence_hash {
+    label: 'Persistence Hash'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.persistence_hash }};;
+  }
+  dimension status {
+    label: 'Status'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.status }};;
+  }
+  dimension schema {
+    label: 'Schema'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.schema }};;
+  }
+  dimension query_model_name {
+    label: 'Query Model Name'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.query_model_name }};;
+  }
+  dimension table_name {
+    label: 'Table Name'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.table_name }};;
+  }
+  dimension view_name {
+    label: 'View Name'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.view_name }};;
+  }
+  dimension tenant_id {
+    label: 'Tenant Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.tenant_id }};;
+  }
+  dimension data_source_id {
+    label: 'Data Source Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.data_source_id }};;
+  }
+  dimension project_id {
+    label: 'Project Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.project_id }};;
+  }
+  dimension created_at {
+    label: 'Created At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_at }};;
+  }
+  dimension updated_at {
+    label: 'Updated At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.updated_at }};;
+  }
+
+  owner: 'admin@domain.com'
+  table_name: '"public"."persisted_tables"'
+}
