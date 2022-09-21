@@ -1,6 +1,6 @@
-Model public_personal_categories {
+Model public_tenants {
   type: 'table'
-  label: 'Personal Categories'
+  label: 'Tenants'
   description: ''
   data_source_name: 'development_2'
   dimension id {
@@ -15,24 +15,6 @@ Model public_personal_categories {
     hidden: false
     definition: @sql {{ #SOURCE.name }};;
   }
-  dimension owner_id {
-    label: 'Owner Id'
-    type: 'number'
-    hidden: false
-    definition: @sql {{ #SOURCE.owner_id }};;
-  }
-  dimension parent_id {
-    label: 'Parent Id'
-    type: 'number'
-    hidden: false
-    definition: @sql {{ #SOURCE.parent_id }};;
-  }
-  dimension tenant_id {
-    label: 'Tenant Id'
-    type: 'number'
-    hidden: false
-    definition: @sql {{ #SOURCE.tenant_id }};;
-  }
   dimension created_at {
     label: 'Created At'
     type: 'datetime'
@@ -45,7 +27,25 @@ Model public_personal_categories {
     hidden: false
     definition: @sql {{ #SOURCE.updated_at }};;
   }
+  dimension settings {
+    label: 'Settings'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.settings }};;
+  }
+  dimension uname {
+    label: 'Uname'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.uname }};;
+  }
+  dimension duplicated {
+    label: 'Duplicated'
+    type: 'truefalse'
+    hidden: false
+    definition: @sql {{ #SOURCE.duplicated }};;
+  }
 
   owner: 'admin@domain.com'
-  table_name: '"public"."personal_categories"'
+  table_name: '"public"."tenants"'
 }
