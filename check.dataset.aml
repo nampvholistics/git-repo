@@ -2,10 +2,7 @@ Dataset check {
   label: 'Check'
   description: ''
   data_source_name: 'development_1'
-  models: [
-    model__public_activities,
-    model__public_comments
-  ]
+  models: [public_activities, public_comments, public_tenants, public_users]
   relationships: [
   ]
   owner: 'admin@domain.com'

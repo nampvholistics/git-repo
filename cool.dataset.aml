@@ -2,11 +2,7 @@ Dataset cool {
   label: 'Cool'
   description: ''
   data_source_name: 'development_1'
-  models: [
-    model__public_activities,
-    model__public_comments,
-    model__public_tenants
-  ]
-  relationships: [relationship(model__public_activities.tenant_id > model__public_tenants.id, true)]
+  models: [public_comments, public_users]
+  relationships: []
   owner: 'admin@domain.com'
 }

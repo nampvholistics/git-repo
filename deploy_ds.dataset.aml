@@ -3,11 +3,7 @@ Dataset deploy_ds {
   description: ''
   data_source_name: 'development_1'
   models: [
-    model__public_activities,
-    model__public_tenants,
-    model__public_comments,
-    model__public_users
   ]
-  relationships: [relationship(model__public_activities.tenant_id > model__public_tenants.id, true)]
+  relationships: []
   owner: 'admin@domain.com'
 }
