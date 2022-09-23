@@ -1,0 +1,26 @@
+import './public_activities.model.aml' {
+  public_activities as model__public_activities
+}
+import './public_tenants.model.aml' {
+  public_tenants as model__public_tenants
+}
+import './public_comments.model.aml' {
+  public_comments as model__public_comments
+}
+import './public_users.model.aml' {
+  public_users as model__public_users
+}
+
+Dataset deploy_ds {
+  label: 'Deploy Ds'
+  description: ''
+  data_source_name: 'development_1'
+  models: [
+    model__public_activities,
+    model__public_tenants,
+    model__public_comments,
+    model__public_users
+  ]
+  relationships: [relationship(model__public_activities.tenant_id > model__public_tenants.id, true)]
+  owner: 'admin@domain.com'
+}
