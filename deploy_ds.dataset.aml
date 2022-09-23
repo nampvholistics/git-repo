@@ -1,16 +1,3 @@
-import './public_activities.model.aml' {
-  public_activities as model__public_activities
-}
-import './public_tenants.model.aml' {
-  public_tenants as model__public_tenants
-}
-import './public_comments.model.aml' {
-  public_comments as model__public_comments
-}
-import './public_users.model.aml' {
-  public_users as model__public_users
-}
-
 Dataset deploy_ds {
   label: 'Deploy Ds'
   description: ''
