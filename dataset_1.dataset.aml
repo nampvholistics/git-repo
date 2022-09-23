@@ -21,7 +21,6 @@ Dataset dataset_1 {
     model__public_tenants,
     model__public_users
   ]
-  relationships: [
-  ]
+  relationships: [relationship(model__public_activities.tenant_id > model__public_tenants.id, true)]
   owner: 'admin@domain.com'
 }
