@@ -1,0 +1,19 @@
+import './public_activities.model.aml' {
+  public_activities as model__public_activities
+}
+import './public_comments.model.aml' {
+  public_comments as model__public_comments
+}
+
+Dataset check {
+  label: 'Check'
+  description: ''
+  data_source_name: 'development_1'
+  models: [
+    model__public_activities,
+    model__public_comments
+  ]
+  relationships: [
+  ]
+  owner: 'admin@domain.com'
+}
