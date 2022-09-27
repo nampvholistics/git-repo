@@ -3,7 +3,6 @@ Dataset check {
   description: ''
   data_source_name: 'development_1'
   models: [public_activities, public_comments, public_tenants, public_users]
-  relationships: [
-  ]
+  relationships: [relationship(public_comments.tenant_id > public_tenants.id, true)]
   owner: 'admin@domain.com'
 }
