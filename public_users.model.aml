@@ -1,35 +1,14 @@
-// yeghuhuehf
-Model public_test {
-type: 'table'
-  label: 'Tests'
-  description: ''
-  data_source_name: 'development'
-  dimension id {
-    label: 'Id'
-    type: 'number'
-    hidden: false
-    definition: @sql {{ #SOURCE.id }};;
-  }
-
-  //conflict nef troiw dat oi
-//kakakaka
-//ai cho maf conflicrt
-// quai dan
-}
-
-// thoi ma, dung conflict
 Model public_users {
   type: 'table'
   label: 'Users'
   description: ''
-  data_source_name: 'development'
+  data_source_name: 'development_1'
   dimension id {
     label: 'Id'
     type: 'number'
     hidden: false
     definition: @sql {{ #SOURCE.id }};;
   }
-//abcd 
   dimension allow_authentication_token {
     label: 'Allow Authentication Token'
     type: 'truefalse'
@@ -176,7 +155,7 @@ Model public_users {
   }
   dimension last_visited_node {
     label: 'Last Visited Node'
-    type: 'text'
+    type: 'composite'
     hidden: false
     definition: @sql {{ #SOURCE.last_visited_node }};;
   }
@@ -194,14 +173,23 @@ Model public_users {
   }
   dimension session_token {
     label: 'Session Token'
-    type: 'int'
+    type: 'text'
     hidden: false
     definition: @sql {{ #SOURCE.session_token }};;
+  }
+  dimension initials {
+    label: 'Initials'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.initials }};;
+  }
+  dimension dev_mode_enabled {
+    label: 'Dev Mode Enabled'
+    type: 'truefalse'
+    hidden: false
+    definition: @sql {{ #SOURCE.dev_mode_enabled }};;
   }
 
   owner: 'admin@domain.com'
   table_name: '"public"."users"'
 }
-//eufgeu/
-
-//jfiej
