@@ -1,8 +1,8 @@
-Model public_activities {
-  type: 'table'
-  label: 'Activities'
+Model new_query_mode {
+  type: 'query'
+  label: 'New Query Mode'
   description: ''
-  data_source_name: 'development'
+  data_source_name: 'development_1'
   dimension id {
     label: 'Id'
     type: 'number'
@@ -21,11 +21,10 @@ Model public_activities {
     hidden: false
     definition: @sql {{ #SOURCE.trackable_type }};;
   }
-  // Befef conflict
   dimension owner_id {
-    label: 'Owner Id'//cccrgegcff
+    label: 'Owner Id'
     type: 'number'
-    hidden: false //efefew3f3
+    hidden: false
     definition: @sql {{ #SOURCE.owner_id }};;
   }
   dimension owner_type {
@@ -96,5 +95,8 @@ Model public_activities {
   }
 
   owner: 'admin@domain.com'
-  table_name: '"public"."activities"'
+  query: @sql SELECT * FROM {{ #public_activities }};;
+  models: [
+    public_activities
+  ]
 }

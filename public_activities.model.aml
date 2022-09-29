@@ -1,8 +1,8 @@
-Model public_activities1 {
+Model public_activities {
   type: 'table'
   label: 'Activities'
   description: ''
-  data_source_name: 'development'
+  data_source_name: 'development_1'
   dimension id {
     label: 'Id'
     type: 'number'
@@ -21,10 +21,11 @@ Model public_activities1 {
     hidden: false
     definition: @sql {{ #SOURCE.trackable_type }};;
   }
+  // Befef conflict
   dimension owner_id {
-    label: 'Owner Id'
+    label: 'Owner Id'//cccrgegcff
     type: 'number'
-    hidden: false
+    hidden: false //efefew3f3
     definition: @sql {{ #SOURCE.owner_id }};;
   }
   dimension owner_type {

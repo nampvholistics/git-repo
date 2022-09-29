@@ -1,0 +1,8 @@
+Dataset cool {
+  label: 'Cool'
+  description: ''
+  data_source_name: 'development_1'
+  models: [public_comments, public_users]
+  relationships: []
+  owner: 'admin@domain.com'
+}

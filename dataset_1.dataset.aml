@@ -1,0 +1,8 @@
+Dataset dataset_1 {
+  label: 'Dataset 1'
+  description: ''
+  data_source_name: 'development_1'
+  models: [public_tenants, public_users, public_activities]
+  relationships: []
+  owner: 'admin@domain.com'
+}

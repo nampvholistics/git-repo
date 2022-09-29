@@ -1,8 +1,8 @@
-Model public_app_notifications {
+Model public_comments {
   type: 'table'
-  label: 'App Notifications'
+  label: 'Comments'
   description: ''
-  data_source_name: 'development'
+  data_source_name: 'development_1'
   dimension id {
     label: 'Id'
     type: 'number'
@@ -15,29 +15,35 @@ Model public_app_notifications {
     hidden: false
     definition: @sql {{ #SOURCE.tenant_id }};;
   }
-  dimension recipient_id {
-    label: 'Recipient Id'
+  dimension user_id {
+    label: 'User Id'
     type: 'number'
     hidden: false
-    definition: @sql {{ #SOURCE.recipient_id }};;
+    definition: @sql {{ #SOURCE.user_id }};;
   }
-  dimension title {
-    label: 'Title'
+  dimension target_type {
+    label: 'Target Type'
     type: 'text'
     hidden: false
-    definition: @sql {{ #SOURCE.title }};;
+    definition: @sql {{ #SOURCE.target_type }};;
   }
-  dimension body {
-    label: 'Body'
+  dimension target_id {
+    label: 'Target Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.target_id }};;
+  }
+  dimension content {
+    label: 'Content'
     type: 'text'
     hidden: false
-    definition: @sql {{ #SOURCE.body }};;
+    definition: @sql {{ #SOURCE.content }};;
   }
-  dimension read_at {
-    label: 'Read At'
+  dimension resolved_at {
+    label: 'Resolved At'
     type: 'datetime'
     hidden: false
-    definition: @sql {{ #SOURCE.read_at }};;
+    definition: @sql {{ #SOURCE.resolved_at }};;
   }
   dimension created_at {
     label: 'Created At'
@@ -51,19 +57,7 @@ Model public_app_notifications {
     hidden: false
     definition: @sql {{ #SOURCE.updated_at }};;
   }
-  dimension meta_data {
-    label: 'Meta Data'
-    type: 'composite'
-    hidden: false
-    definition: @sql {{ #SOURCE.meta_data }};;
-  }
-  dimension source {
-    label: 'Source'
-    type: 'text'
-    hidden: false
-    definition: @sql {{ #SOURCE.source }};;
-  }
 
   owner: 'admin@domain.com'
-  table_name: '"public"."app_notifications"'
+  table_name: '"public"."comments"'
 }

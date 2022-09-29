@@ -1,0 +1,9 @@
+Dataset deploy_ds {
+  label: 'Deploy Ds'
+  description: ''
+  data_source_name: 'development_1'
+  models: [
+  ]
+  relationships: []
+  owner: 'admin@domain.com'
+}
