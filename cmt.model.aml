@@ -1,0 +1,165 @@
+Model cmt {
+  type: 'query'
+  label: 'Cmt'
+  description: ''
+  data_source_name: 'development_1'
+  dimension id {
+    label: 'Id'
+    description: ''
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+  }
+  dimension tenant_id {
+    label: 'Tenant Id'
+    description: ''
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.tenant_id }};;
+  }
+  dimension user_id {
+    label: 'User Id'
+    description: ''
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.user_id }};;
+  }
+  dimension target_type {
+    label: 'Target Type'
+    description: ''
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.target_type }};;
+  }
+  dimension target_id {
+    label: 'Target Id'
+    description: ''
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.target_id }};;
+  }
+  dimension content {
+    label: 'Content'
+    description: ''
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.content }};;
+  }
+  dimension resolved_at {
+    label: 'Resolved At'
+    description: ''
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.resolved_at }};;
+  }
+  dimension created_at {
+    label: 'Created At'
+    description: 'cool'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_at }};;
+  }
+  dimension updated_at {
+    label: 'Updated At'
+    description: ''
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.updated_at }};;
+  }
+  dimension monthly_moved_records {
+    label: 'Monthly Moved Records'
+    description: ''
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.monthly_moved_records }};;
+  }
+  dimension data_source_id {
+    label: 'Data Source Id'
+    description: ''
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.data_source_id }};;
+  }
+  dimension root_model_id {
+    label: 'Root Model Id'
+    description: ''
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.root_model_id }};;
+  }
+  dimension title {
+    label: 'Title'
+    description: ''
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.title }};;
+  }
+  dimension description {
+    label: 'Description'
+    description: ''
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.description }};;
+  }
+  dimension category_id {
+    label: 'Category Id'
+    description: ''
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.category_id }};;
+  }
+  dimension query_mode {
+    label: 'Query Mode'
+    description: ''
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.query_mode }};;
+  }
+  dimension owner_id {
+    label: 'Owner Id'
+    description: ''
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.owner_id }};;
+  }
+  dimension uname {
+    label: 'Uname'
+    description: ''
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.uname }};;
+  }
+  dimension project_id {
+    label: 'Project Id'
+    description: ''
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.project_id }};;
+  }
+  dimension name {
+    label: 'Name'
+    description: ''
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.name }};;
+  }
+  dimension settings {
+    label: 'Settings'
+    description: ''
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.settings }};;
+  }
+  dimension duplicated {
+    label: 'Duplicated'
+    description: ''
+    type: 'truefalse'
+    hidden: false
+    definition: @sql {{ #SOURCE.duplicated }};;
+  }
+
+  owner: 'admin@domain.com'
+  query: @sql SELECT * FROM public.data_sets;;
+  models: [
+  ]
+}
