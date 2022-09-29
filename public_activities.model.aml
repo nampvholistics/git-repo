@@ -91,9 +91,49 @@ Model public_activities {
     label: 'Impersonator Id'
     type: 'number'
     hidden: false
-    definition: @sql {{ #SOURCE.impersonator_id }};;
+    definition: @sql {{ #SOURCE.impersonator_id }};; // checj
+  }
+  dimension data_source_id {
+    label: "Data Source Id"
+    type: "number"
+    definition: @sql {{ #SOURCE.data_source_id }};;
+  }
+  dimension root_model_id {
+    label: "Root Model Id"
+    type: "number"
+    definition: @sql {{ #SOURCE.root_model_id }};;
+  }
+  dimension title {
+    label: "Title"
+    type: "text"
+    definition: @sql {{ #SOURCE.title }};;
+  }
+  dimension description {
+    label: "Description"
+    type: "text"
+    definition: @sql {{ #SOURCE.description }};;
+  }
+  dimension category_id {
+    label: "Category Id"
+    type: "number"
+    definition: @sql {{ #SOURCE.category_id }};;
+  }
+  dimension query_mode {
+    label: "Query Mode"
+    type: "text"
+    definition: @sql {{ #SOURCE.query_mode }};;
+  }
+  dimension uname {
+    label: "Uname"
+    type: "text"
+    definition: @sql {{ #SOURCE.uname }};;
+  }
+  dimension project_id {
+    label: "Project Id"
+    type: "number"
+    definition: @sql {{ #SOURCE.project_id }};;
   }
 
   owner: 'admin@domain.com'
-  table_name: '"public"."activities"'
+  table_name: "\"public\".\"data_sets\""
 }
