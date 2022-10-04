@@ -2,7 +2,7 @@ Model new_query_mode {
   type: 'query'
   label: 'New Query Mode'
   description: ''
-  data_source_name: 'development_1'
+  data_source_name: "development_1"
   dimension id {
     label: 'Id'
     description: ''
@@ -114,11 +114,33 @@ Model new_query_mode {
     hidden: false
     definition: @sql {{ #SOURCE.id }};;
   }
+  dimension user_id {
+    label: "User Id"
+    type: "number"
+    definition: @sql {{ #SOURCE.user_id }};;
+  }
+  dimension target_type {
+    label: "Target Type"
+    type: "text"
+    definition: @sql {{ #SOURCE.target_type }};;
+  }
+  dimension target_id {
+    label: "Target Id"
+    type: "number"
+    definition: @sql {{ #SOURCE.target_id }};;
+  }
+  dimension content {
+    label: "Content"
+    type: "text"
+    definition: @sql {{ #SOURCE.content }};;
+  }
+  dimension resolved_at {
+    label: "Resolved At"
+    type: "datetime"
+    definition: @sql {{ #SOURCE.resolved_at }};;
+  }
 
   owner: 'admin@domain.com'
-  query: @sql SELECT * FROM {{ #public_activities }} LEFT JOIN {{ #public_tenants }} ON {{ #public_tenants.id }} = 1;;
-  models: [
-    public_tenants,
-    public_activities
-  ]
+  query: @sql SELECT * FROM {{ #public_comments }} LEFT JOIN {{ #public_tenants }} ON {{ #public_tenants.id }} = 1;;
+  models: [public_tenants, public_comments]
 }
