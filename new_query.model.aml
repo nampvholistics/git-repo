@@ -1,8 +1,8 @@
-Model public_activities {
-  type: 'table'
-  label: 'Activities'
+Model new_query {
+  type: 'query'
+  label: 'New Query'
   description: ''
-  data_source_name: 'development_1'
+  data_source_name: "development_1"
   dimension id {
     label: 'Id'
     type: 'number'
@@ -91,49 +91,40 @@ Model public_activities {
     label: 'Impersonator Id'
     type: 'number'
     hidden: false
-    definition: @sql {{ #SOURCE.impersonator_id }};; // checj
+    definition: @sql {{ #SOURCE.impersonator_id }};; //cool
   }
-  dimension data_source_id {
-    label: "Data Source Id"
+  dimension id_1 {
+    label: "Id"
     type: "number"
-    definition: @sql {{ #SOURCE.data_source_id }};;
+    definition: @sql {{ #SOURCE.id }};;
   }
-  dimension root_model_id {
-    label: "Root Model Id"
+  dimension user_id {
+    label: "User Id"
     type: "number"
-    definition: @sql {{ #SOURCE.root_model_id }};;
+    definition: @sql {{ #SOURCE.user_id }};;
   }
-  dimension title {
-    label: "Title"
+  dimension target_type {
+    label: "Target Type"
     type: "text"
-    definition: @sql {{ #SOURCE.title }};;
+    definition: @sql {{ #SOURCE.target_type }};;
   }
-  dimension description {
-    label: "Description"
-    type: "text"
-    definition: @sql {{ #SOURCE.description }};;
-  }
-  dimension category_id {
-    label: "Category Id"
+  dimension target_id {
+    label: "Target Id"
     type: "number"
-    definition: @sql {{ #SOURCE.category_id }};;
+    definition: @sql {{ #SOURCE.target_id }};;
   }
-  dimension query_mode {
-    label: "Query Mode"
+  dimension content {
+    label: "Content"
     type: "text"
-    definition: @sql {{ #SOURCE.query_mode }};;
+    definition: @sql {{ #SOURCE.content }};;
   }
-  dimension uname {
-    label: "Uname"
-    type: "text"
-    definition: @sql {{ #SOURCE.uname }};;
-  }
-  dimension project_id {
-    label: "Project Id"
-    type: "number"
-    definition: @sql {{ #SOURCE.project_id }};;
+  dimension resolved_at {
+    label: "Resolved At"
+    type: "datetime"
+    definition: @sql {{ #SOURCE.resolved_at }};;
   }
 
   owner: 'admin@domain.com'
-  table_name: "\"public\".\"data_sets\""
+  query: @sql SELECT * FROM {{ #public_comments }} LEFT JOIN {{ #public_tenants }} ON {{ #public_tenants.id }} = 1;;
+  models: [public_tenants, public_comments]
 }
