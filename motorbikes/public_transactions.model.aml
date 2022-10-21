@@ -1,0 +1,27 @@
+Model public_transactions {
+  type: 'table'
+  label: 'Transactions'
+  description: ''
+  data_source_name: 'motorbikes'
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+  }
+  dimension transaction_number {
+    label: 'Transaction Number'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.transaction_number }};;
+  }
+  dimension user_id {
+    label: 'User Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.user_id }};;
+  }
+
+  owner: 'admin@domain.com'
+  table_name: '"public"."transactions"'
+}
