@@ -51,6 +51,11 @@ Model public_motorbikes {
     hidden: false
     definition: @sql {{ #SOURCE.contact_info }};;
   }
+  dimension description {
+    label: "Description"
+    type: "number"
+    definition: @sql {{ #SOURCE.description }};;
+  }
 
   owner: 'admin@domain.com'
   table_name: '"public"."motorbikes"'
