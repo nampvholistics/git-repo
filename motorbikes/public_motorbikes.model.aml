@@ -56,6 +56,11 @@ Model public_motorbikes {
     type: "number"
     definition: @sql {{ #SOURCE.description }};;
   }
+  dimension mieu_ta {
+    label: "Mieu Ta"
+    type: "text"
+    definition: @sql {{ #SOURCE.mieu_ta }};;
+  }
 
   owner: 'admin@domain.com'
   table_name: '"public"."motorbikes"'
