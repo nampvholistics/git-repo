@@ -1,0 +1,48 @@
+Model another {
+  type: 'query'
+  label: 'Another'
+  description: ''
+  data_source_name: 'motorbikes'
+  dimension user_id {
+    label: 'User Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.user_id }};;
+  }
+  dimension username {
+    label: 'Username'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.username }};;
+  }
+  dimension password {
+    label: 'Password'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.password }};;
+  }
+  dimension email {
+    label: 'Email'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.email }};;
+  }
+  dimension created_on {
+    label: 'Created On'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_on }};;
+  }
+  dimension last_login {
+    label: 'Last Login'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.last_login }};;
+  }
+
+  owner: 'admin@domain.com'
+  query: @sql SELECT * FROM {{ #public_accounts }};;
+  models: [
+    public_accounts
+  ]
+}
