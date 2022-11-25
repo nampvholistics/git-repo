@@ -1,0 +1,12 @@
+Dataset motorbike_dataset_1 {
+  label: 'Motorbike Dataset'
+  description: ''
+  data_source_name: 'motorbikes'
+  models: [
+    public_motorbikes,
+    public_roles
+  ]
+  relationships: [
+  ]
+  owner: 'admin@domain.com'
+}

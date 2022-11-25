@@ -6,6 +6,8 @@ Dataset motorbike_dataset {
     public_motorbikes,
     public_users_account,
     public_transactions
+    ,
+    public_motorbikes_1
   ]
   relationships: [relationship(public_motorbikes.user_id > public_users_account.id, true)]
   owner: 'admin@domain.com'
