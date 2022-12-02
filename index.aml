@@ -1,1 +1,1 @@
-import './role.dataset.aml' {roles}
+import './role.dataset.aml' {role}
