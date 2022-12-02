@@ -1,0 +1,15 @@
+import './motorbikes/public_roles.model.aml' {
+  public_roles as model__public_roles
+}
+
+Dataset role {
+  label: 'Role'
+  description: ''
+  data_source_name: 'motorbikes'
+  models: [
+    model__public_roles
+  ]
+  relationships: [
+  ]
+  owner: 'admin@domain.com'
+}
