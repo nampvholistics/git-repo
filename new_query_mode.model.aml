@@ -99,4 +99,9 @@ Model new_query_mode {
   models: [
     public_activities
   ]
+  measure iddd {
+    label: "Iddd"
+    type: "number"
+    definition: @sql COUNT({{ owner_id }});;
+  }
 }
